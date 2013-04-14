@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Treeforce.. example</title>
+      <link rel="stylesheet" href="lib/css/style.css" type="text/css" />
+
+  </head>
+  <body>
+    <div class="tree">
+        <ul>
+          <li>
+            <a href="#a">A</a>
+            <ul>
+                <li>
+                  <a href="#aa" >A.A</a>
+                </li>
+                 <li>
+                  <a href="#ab">A.b</a>
+                </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#b">B</a>
+            <ul>
+                <li>
+                  <a href="#ba" >b.A</a>
+                </li>
+                <li>
+                  <a href="#bb" >b.b</a>
+                  <ul>
+                    <li>
+                      <a href="#bba" >b.b.a.</a>
+                      <ul>
+                      <li>
+                        <a href="#bbaa" class="active">b.b.a.a.</a>
+                      </li>
+                    </ul>
+                    </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="lib/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="jQuery.tree.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(event){
+        $('.tree').tree('init').tree('collapse').tree('classes').tree('indent',{'indent':10});
+     });
+    </script>
+  </body>
+</html>

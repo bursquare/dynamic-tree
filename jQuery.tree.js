@@ -2,17 +2,11 @@
   var methods = {
     init: function(options){
       var _this = this;
-      var _methods = options.methods;
       
       this.elements = {};
       this.elements.list = this.find(' > ul');
       this.elements.list.addClass('parent');
       this.elements.list.children = this.elements.list.find('ul');
-
-      $.each(_methods, function(index,_method){
-        _this.tree(String(_method));
-      });
-      //this.tree('collapse');
     },
     refresh: function(options){
       this.elements.list.children.toggleClass('is-hidden');
@@ -46,7 +40,7 @@
       });
     },
     indent: function(options){
-      var indent = (options === Object) ? parseInt(options.indent) : 10;
+      var indent = options.indent;
       $.each(this.elements.list.children, function(index, list){
         var depth = $(list).parents('ul').length;
         $(list).css({'padding-left' : (depth * indent) });

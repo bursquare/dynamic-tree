@@ -1,0 +1,33 @@
+ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.tree ul li a {
+  display: block;
+  color: #0f0fff;
+  padding: 10px 10px 10px 10px;
+}
+.tree ul li a:hover,
+.tree ul li a:active,
+.tree ul li a:focus {
+  background-color: #0f0fff;
+  color: #ffffff;
+}
+.tree ul li a:after{
+  content: '  >';
+}
+.tree ul li a.is-expanded:after{
+  content: '  v';
+}
+.tree ul li a.active{
+  background-color: #0f0fff;
+  color: #ffffff;
+}
+/* State */
+.is-hidden{
+  display: none;
+}
+.is-visible{
+  display: block;
+}
